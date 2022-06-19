@@ -6,16 +6,7 @@ from rest_framework.response import Response
 from django.shortcuts import redirect
 import random
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
-from django.template.loader import render_to_string
-from django.utils.html import strip_tags
-from django.core import mail
-import json
-from django.http import HttpResponse, JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
-from .models import Snippet
-from .serializers import SnippetSerializer
 
 
 @api_view(['GET', 'POST'])
