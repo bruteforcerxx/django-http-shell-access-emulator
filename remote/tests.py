@@ -5,12 +5,13 @@ import json
 start = time.time()
 print('starting...')
 
-content = {"message": "This is a test message"}
+content = {"message": "This is a test messagvvvve"}
 print(type(content))
 
-endpoint = 'http://127.0.0.1:8000/'
+endpoint_1 = 'http://127.0.0.1:8000/'
+endpoint_2 = 'https://xremote.herokuapp.com/'
 
-test = requests.post(endpoint, json=content)
+test = requests.post(endpoint_2, json=content)
 
-print(test.json())
+print(test)
 print('finished in: ', time.time() - start)
