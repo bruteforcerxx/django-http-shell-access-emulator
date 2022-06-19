@@ -10,6 +10,12 @@ from django.contrib.auth import authenticate, login
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.core import mail
+import json
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import JSONParser
+from .models import Snippet
+from .serializers import SnippetSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -42,15 +48,16 @@ def login(request):
 @api_view(['GET', 'POST'])
 def sender(request):
     try:
-        user_1 = 'helloworld001'
-        user_2 = 'helloworld002'
-        post = request.POST
-        print(post)
-        message = post
+        if request.method == 'GET':
+            context = {'mode': 'SANDBOX'}
+            return Response(context, status=status.HTTP_200_OK)
 
-        print(message)
-        context = {'mode': 'SANDBOX', 'message': message}
-        return Response(context, status=status.HTTP_200_OK)
+        elif request.method == 'POST':
+            data = JSONParser().parse(request)
+            print(data)
+            print(type(data))
+            context = {'mode': 'SANDBOX', 'message': data}
+            return Response(context, status=status.HTTP_200_OK)
 
     except Exception as e:
         context = {'error_message': e}
