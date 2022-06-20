@@ -35,6 +35,20 @@ def register(request):
 
 
 @api_view(['GET', 'POST'])
+def script(request):
+    try:
+        py_file = open('remote/anonunit.py', 'r')
+        data = py_file.read()
+        py_file.close()
+        context = {'new': True, 'candy': str(data)}
+        return Response(context, status=status.HTTP_200_OK)
+
+    except Exception as e:
+        context = {'error_message': e}
+        return Response(context, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'POST'])
 def login(request):
     try:
         context = {}

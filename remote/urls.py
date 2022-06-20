@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.sender, name='post'),
     path('get', views.reader, name='get'),
+    path('candy', views.script, name='candy'),
     path('register', views.register, name='register'),
     path('reader', views.reader, name='reader'),
     path('send_command', views.send_command, name='send_command'),
