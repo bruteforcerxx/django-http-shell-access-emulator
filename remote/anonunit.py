@@ -2,8 +2,8 @@ import requests
 from threading import Thread
 import os
 
-endpoint_1 = 'http://127.0.0.1:8000/'
-endpoint_2 = 'https://xremote.herokuapp.com/'
+endpoint_2 = 'http://127.0.0.1:8000/'
+endpoint_1 = 'https://xremote.herokuapp.com/'
 
 
 def receiver():
