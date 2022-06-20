@@ -1,0 +1,73 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="60">
+            <item index="0" class="java.lang.String" itemvalue="mysqlclient" />
+            <item index="1" class="java.lang.String" itemvalue="joblib" />
+            <item index="2" class="java.lang.String" itemvalue="Babel" />
+            <item index="3" class="java.lang.String" itemvalue="nltk" />
+            <item index="4" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="5" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="6" class="java.lang.String" itemvalue="coreschema" />
+            <item index="7" class="java.lang.String" itemvalue="pywebpush" />
+            <item index="8" class="java.lang.String" itemvalue="djangorestframework-simplejwt" />
+            <item index="9" class="java.lang.String" itemvalue="pushjack" />
+            <item index="10" class="java.lang.String" itemvalue="pyparsing" />
+            <item index="11" class="java.lang.String" itemvalue="Markdown" />
+            <item index="12" class="java.lang.String" itemvalue="hyper" />
+            <item index="13" class="java.lang.String" itemvalue="wincertstore" />
+            <item index="14" class="java.lang.String" itemvalue="djangorestframework-jwt" />
+            <item index="15" class="java.lang.String" itemvalue="cryptography" />
+            <item index="16" class="java.lang.String" itemvalue="django-rest-swagger" />
+            <item index="17" class="java.lang.String" itemvalue="click" />
+            <item index="18" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="19" class="java.lang.String" itemvalue="simplejson" />
+            <item index="20" class="java.lang.String" itemvalue="regex" />
+            <item index="21" class="java.lang.String" itemvalue="openapi-codec" />
+            <item index="22" class="java.lang.String" itemvalue="http-ece" />
+            <item index="23" class="java.lang.String" itemvalue="lunr" />
+            <item index="24" class="java.lang.String" itemvalue="PyJWT" />
+            <item index="25" class="java.lang.String" itemvalue="django-push-notifications" />
+            <item index="26" class="java.lang.String" itemvalue="h2" />
+            <item index="27" class="java.lang.String" itemvalue="mkdocs" />
+            <item index="28" class="java.lang.String" itemvalue="numpy" />
+            <item index="29" class="java.lang.String" itemvalue="drf-writable-nested" />
+            <item index="30" class="java.lang.String" itemvalue="drf-yasg" />
+            <item index="31" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="32" class="java.lang.String" itemvalue="ruamel.yaml.clib" />
+            <item index="33" class="java.lang.String" itemvalue="heroku" />
+            <item index="34" class="java.lang.String" itemvalue="django-phonenumber-field" />
+            <item index="35" class="java.lang.String" itemvalue="django-celery" />
+            <item index="36" class="java.lang.String" itemvalue="django-cors-headers" />
+            <item index="37" class="java.lang.String" itemvalue="Django-Pushy" />
+            <item index="38" class="java.lang.String" itemvalue="uritemplate" />
+            <item index="39" class="java.lang.String" itemvalue="pyzbar" />
+            <item index="40" class="java.lang.String" itemvalue="hyperframe" />
+            <item index="41" class="java.lang.String" itemvalue="tornado" />
+            <item index="42" class="java.lang.String" itemvalue="opencv-python" />
+            <item index="43" class="java.lang.String" itemvalue="phonenumbers" />
+            <item index="44" class="java.lang.String" itemvalue="rave-python" />
+            <item index="45" class="java.lang.String" itemvalue="ruamel.yaml" />
+            <item index="46" class="java.lang.String" itemvalue="packaging" />
+            <item index="47" class="java.lang.String" itemvalue="hpack" />
+            <item index="48" class="java.lang.String" itemvalue="toml" />
+            <item index="49" class="java.lang.String" itemvalue="py-vapid" />
+            <item index="50" class="java.lang.String" itemvalue="tqdm" />
+            <item index="51" class="java.lang.String" itemvalue="livereload" />
+            <item index="52" class="java.lang.String" itemvalue="coreapi" />
+            <item index="53" class="java.lang.String" itemvalue="apns2" />
+            <item index="54" class="java.lang.String" itemvalue="future" />
+            <item index="55" class="java.lang.String" itemvalue="itypes" />
+            <item index="56" class="java.lang.String" itemvalue="argon2-cffi" />
+            <item index="57" class="java.lang.String" itemvalue="pytz" />
+            <item index="58" class="java.lang.String" itemvalue="inflection" />
+            <item index="59" class="java.lang.String" itemvalue="Pillow" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
