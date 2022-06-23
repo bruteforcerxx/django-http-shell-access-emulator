@@ -71,7 +71,7 @@ def login(request):
             cr.save()
             print('saved')
 
-            data = {'response': '', 'client': uid, 'time_received': str(timezone.now()),
+            data = {'response': f'CLIENT {uid} ONLINE', 'client': uid, 'time_received': str(timezone.now()),
                                    'exec_duration': 'NIL', 'directory': 'NIL'}
 
             user = 'helloworld'
