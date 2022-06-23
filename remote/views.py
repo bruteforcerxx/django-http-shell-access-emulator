@@ -27,7 +27,7 @@ def login(request):
             userdata = UserData.objects.get(user=user[0])
             print(userdata)
 
-            data = {'response': '', 'client': uid, 'time_received': str(timezone.now()),
+            data = {'response': f'CLIENT {uid} ONLINE', 'client': uid, 'time_received': str(timezone.now()),
                                    'exec_duration': 'NIL', 'directory': 'NIL'}
 
             user = 'helloworld'
