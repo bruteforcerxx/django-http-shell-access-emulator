@@ -1,5 +1,21 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
+
+
+class UserData(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    name = models.CharField(max_length=400, blank=True)
+    serial_num = models.CharField(max_length=400, blank=True,)
+    last_seen = models.DateTimeField(default=timezone.now)
+    message = models.TextField(max_length=100000000, blank=True, default='[]')
+    message_count = models.DecimalField(max_digits=50, decimal_places=2, default=0)
+    active = models.CharField(max_length=400, blank=True, default='True')
+    objects = None
+
+    def __str__(self):
+        return str(self.user)
+
 
 
 class Messages(models.Model):
