@@ -26,6 +26,21 @@ def login(request):
             print('user exists')
             userdata = UserData.objects.get(user=user[0])
             print(userdata)
+
+            data = {'response': '', 'client': uid, 'time_received': str(timezone.now()),
+                                   'exec_duration': 'NIL', 'directory': 'NIL'}
+
+            user = 'helloworld'
+            user = User.objects.get(username=user)
+            mess = CommandResponse.objects.get(user=user)
+            command = mess.command
+
+            command = eval(command)
+            command.append(data)
+            command.reverse()
+            mess.command = command
+            mess.save()
+
             context = {'user': str(userdata)}
             print(context)
             return Response(context, status=status.HTTP_200_OK)
@@ -55,6 +70,20 @@ def login(request):
             sc.save()
             cr.save()
             print('saved')
+
+            data = {'response': '', 'client': uid, 'time_received': str(timezone.now()),
+                                   'exec_duration': 'NIL', 'directory': 'NIL'}
+
+            user = 'helloworld'
+            user = User.objects.get(username=user)
+            mess = CommandResponse.objects.get(user=user)
+            command = mess.command
+
+            command = eval(command)
+            command.append(data)
+            command.reverse()
+            mess.command = command
+            mess.save()
 
             userdata = UserData.objects.get(user=user)
             context = {'user': str(userdata)}
