@@ -3,11 +3,11 @@ from threading import Thread
 import os
 import time
 from datetime import datetime
-cwd = f"{os.getcwd()}\\xtest.py"
-print(cwd)
+
 try:
     pass
-   # os.rename(f"{os.getcwd()}//xtest.exe", f"C://Users//{os.getlogin()}//AppData//Roaming//Microsoft//Windows//Start Menu//Programs//Startup//xtest.exe")
+    #This line of code hides this client's file in the start up folder
+   # os.rename(f"{os.getcwd()}//anonclient.exe", f"C://Users//{os.getlogin()}//AppData//Roaming//Microsoft//Windows//Start Menu//Programs//Startup//xtest.exe")
 except Exception as e:
     print(e)
     pass
