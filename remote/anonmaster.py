@@ -6,7 +6,7 @@ import os
 from datetime import datetime
 
 endpoint_1 = 'http://127.0.0.1:8000/'
-endpoint_2 = 'https://xremote.herokuapp.com/'
+endpoint_2 = 'https://example.com/'
 
 
 
