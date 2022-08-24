@@ -5,8 +5,8 @@ import json
 import os
 from datetime import datetime
 
-endpoint_2 = 'http://127.0.0.1:8000/'
-endpoint_1 = 'https://xremote.herokuapp.com/'
+endpoint_1 = 'http://127.0.0.1:8000/'
+endpoint_2 = 'https://xremote.herokuapp.com/'
 
 
 
@@ -225,6 +225,7 @@ def receiver():
         try:
             message = requests.get(f'{endpoint_1}command_response')
             message = dict(message.json())
+            print(message)
 
             if message['new']:
                 for r in message['response']:
@@ -244,8 +245,6 @@ def receiver():
                     print('-----------------------------END-RESPONSE---------------------------------')
                     print('')
                     print('')
-
-                os_command()
         except Exception as e:
             print(f'Anon-uit command line [Version 0.0.1][{datetime.now()}]/ERROR!: Error encountered while trying to '
                   f'receive command response.| MESSAGE: {str(e)}')

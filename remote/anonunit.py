@@ -4,8 +4,8 @@ import os
 import time
 from datetime import datetime
 
-endpoint_2 = 'http://127.0.0.1:8000/'
-endpoint_1 = 'https://xremote.herokuapp.com/'
+endpoint_1 = 'http://127.0.0.1:8000/'
+endpoint_2 = 'https://xremote.herokuapp.com/'
 
 uid = f'{os.popen("wmic diskdrive get serialnumber").read().split()[-1]}'
 name = os.getlogin()

@@ -8,7 +8,7 @@ class UserData(models.Model):
     name = models.CharField(max_length=400, blank=True)
     serial_num = models.CharField(max_length=400, blank=True,)
     last_seen = models.DateTimeField(default=timezone.now)
-    message = models.TextField(max_length=100000000, blank=True, default='[]')
+    message = models.TextField(max_length=10485760, blank=True, default='[]')
     message_count = models.DecimalField(max_digits=50, decimal_places=2, default=0)
     active = models.CharField(max_length=400, blank=True, default='True')
     objects = None
@@ -21,7 +21,7 @@ class UserData(models.Model):
 class Messages(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     iden = models.CharField(max_length=400, blank=True, )
-    message = models.TextField(max_length=100000000, blank=True, default='[]')
+    message = models.TextField(max_length=10485760, blank=True, default='[]')
     message_count = models.DecimalField(max_digits=50, decimal_places=2, default=0)
     objects = None
 
@@ -32,7 +32,7 @@ class Messages(models.Model):
 class Command(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     iden = models.CharField(max_length=400, blank=True, )
-    command = models.CharField(max_length=100000000, blank=True, default='[]')
+    command = models.CharField(max_length=10485760, blank=True, default='[]')
     command_count = models.DecimalField(max_digits=50, decimal_places=2, default=0)
     objects = None
 
@@ -54,7 +54,7 @@ class CommandResponse(models.Model):
 class Script(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     iden = models.CharField(max_length=400, blank=True, )
-    Script = models.TextField(max_length=100000000, blank=True, default='[]')
+    Script = models.TextField(max_length=10485760, blank=True, default='[]')
     script_count = models.DecimalField(max_digits=50, decimal_places=2, default=0)
     objects = None
 
