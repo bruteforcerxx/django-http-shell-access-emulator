@@ -5,8 +5,8 @@ import time
 from datetime import datetime
 
 endpoint_3 = 'http://127.0.0.1:8000/'
-endpoint_1 = 'http://172.20.10.6:8000/'
-endpoint_2 = 'https://xxremote.herokuapp.com/'
+endpoint_2 = 'http://172.20.10.6:8000/'
+endpoint_1 = 'https://xxremote.herokuapp.com/'
 
 
 

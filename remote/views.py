@@ -185,7 +185,7 @@ def commander(request):
 @api_view(['GET'])
 def client_command_response(request):
     try:
-        for i in range(10):
+        for i in range(50):
             user = 'helloworld'
             user = User.objects.get(username=user)
             mess = CommandResponse.objects.get(user=user)
