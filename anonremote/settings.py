@@ -137,13 +137,12 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-host = 'office@alphadexltd.com'
-password = 'Xenonsugar1'
+host = 'olumichael2015@outlook.com'
+password = 'Xenonsugar1#'
 
-DEFAULT_FROM_EMAIL = "Alpha-dex <office@alphadexltd.com>"
+DEFAULT_FROM_EMAIL = "My Portfolio <olumichael2015@outlook.com>"
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'mail.privateemail.com'
+EMAIL_HOST = 'smtp.office365.com'
 EMAIL_HOST_PASSWORD = password
 EMAIL_HOST_USER = host
 EMAIL_PORT = 587
-

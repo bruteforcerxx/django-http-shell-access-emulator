@@ -1,0 +1,1287 @@
+(['C:\\Users\\OLU MICHAEL\\Desktop\\anonremote\\anonremote\\anonclient.py'],
+ ['C:\\Users\\OLU MICHAEL\\Desktop\\anonremote\\anonremote'],
+ ['codecs'],
+ ['c:\\users\\olu '
+  'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
+  'c:\\users\\olu '
+  'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks\\__pycache__',
+  'c:\\users\\olu '
+  'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\rthooks',
+  'c:\\users\\olu '
+  'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\rthooks\\__pycache__',
+  'c:\\users\\olu '
+  'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks'],
+ {},
+ [],
+ [],
+ False,
+ False,
+ False,
+ '3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit '
+ '(AMD64)]',
+ [('pyi_rth_subprocess',
+   'C:\\Users\\OLU '
+   'MICHAEL\\AppData\\Local\\Programs\\Python\\Python38\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_subprocess.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\OLU '
+   'MICHAEL\\AppData\\Local\\Programs\\Python\\Python38\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('anonclient',
+   'C:\\Users\\OLU MICHAEL\\Desktop\\anonremote\\anonremote\\anonclient.py',
+   'PYSOURCE')],
+ [('inspect',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\inspect.py',
+   'PYMODULE'),
+  ('importlib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\metadata.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('configparser',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\configparser.py',
+   'PYMODULE'),
+  ('posixpath',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\posixpath.py',
+   'PYMODULE'),
+  ('genericpath',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\genericpath.py',
+   'PYMODULE'),
+  ('stat',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\stat.py',
+   'PYMODULE'),
+  ('zipfile',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('py_compile',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('ntpath',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\ntpath.py',
+   'PYMODULE'),
+  ('string',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\string.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\lzma.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_compression.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\bz2.py',
+   'PYMODULE'),
+  ('struct',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\struct.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\shutil.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\gzip.py',
+   'PYMODULE'),
+  ('copy',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\copy.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\fnmatch.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('pathlib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\pathlib.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('email',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email.parser',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.utils',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\utils.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('calendar',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\calendar.py',
+   'PYMODULE'),
+  ('socket',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\socket.py',
+   'PYMODULE'),
+  ('selectors',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\selectors.py',
+   'PYMODULE'),
+  ('random',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\random.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('logging',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('pickle',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\pprint.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('bisect',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\bisect.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.message',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.policy',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.generator',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('base64',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\base64.py',
+   'PYMODULE'),
+  ('getopt',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\getopt.py',
+   'PYMODULE'),
+  ('gettext',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\gettext.py',
+   'PYMODULE'),
+  ('quopri',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\quopri.py',
+   'PYMODULE'),
+  ('uu',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\uu.py',
+   'PYMODULE'),
+  ('optparse',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\optparse.py',
+   'PYMODULE'),
+  ('textwrap',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\textwrap.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email.header',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\email\\errors.py',
+   'PYMODULE'),
+  ('csv',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\csv.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('argparse',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\argparse.py',
+   'PYMODULE'),
+  ('ast',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\ast.py',
+   'PYMODULE'),
+  ('token',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\token.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('dis',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\dis.py',
+   'PYMODULE'),
+  ('opcode',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\opcode.py',
+   'PYMODULE'),
+  ('subprocess',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('signal',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\signal.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\typing.py',
+   'PYMODULE'),
+  ('datetime',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\datetime.py',
+   'PYMODULE'),
+  ('_strptime',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('os',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\os.py',
+   'PYMODULE'),
+  ('threading',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\threading.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('requests',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\__init__.py',
+   'PYMODULE'),
+  ('requests.status_codes',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\status_codes.py',
+   'PYMODULE'),
+  ('requests.structures',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\structures.py',
+   'PYMODULE'),
+  ('requests.compat',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\compat.py',
+   'PYMODULE'),
+  ('http.cookies',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\http\\cookies.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http.client',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\http\\client.py',
+   'PYMODULE'),
+  ('ssl',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\ssl.py',
+   'PYMODULE'),
+  ('http',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('getpass',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\getpass.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\nturl2path.py',
+   'PYMODULE'),
+  ('ftplib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\ftplib.py',
+   'PYMODULE'),
+  ('netrc',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\netrc.py',
+   'PYMODULE'),
+  ('shlex',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\shlex.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\mimetypes.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('tempfile',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\tempfile.py',
+   'PYMODULE'),
+  ('json',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\json\\__init__.py',
+   'PYMODULE'),
+  ('json.encoder',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\json\\encoder.py',
+   'PYMODULE'),
+  ('json.decoder',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\json\\decoder.py',
+   'PYMODULE'),
+  ('json.scanner',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\json\\scanner.py',
+   'PYMODULE'),
+  ('simplejson',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\__init__.py',
+   'PYMODULE'),
+  ('simplejson.scanner',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\scanner.py',
+   'PYMODULE'),
+  ('simplejson.ordered_dict',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\ordered_dict.py',
+   'PYMODULE'),
+  ('simplejson.encoder',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\encoder.py',
+   'PYMODULE'),
+  ('simplejson.compat',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\compat.py',
+   'PYMODULE'),
+  ('imp',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\imp.py',
+   'PYMODULE'),
+  ('simplejson.decoder',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\decoder.py',
+   'PYMODULE'),
+  ('simplejson.raw_json',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\raw_json.py',
+   'PYMODULE'),
+  ('simplejson.errors',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\simplejson\\errors.py',
+   'PYMODULE'),
+  ('decimal',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('contextvars',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\contextvars.py',
+   'PYMODULE'),
+  ('numbers',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\numbers.py',
+   'PYMODULE'),
+  ('__future__',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\__future__.py',
+   'PYMODULE'),
+  ('requests.api',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\api.py',
+   'PYMODULE'),
+  ('requests.sessions',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\sessions.py',
+   'PYMODULE'),
+  ('requests.adapters',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\adapters.py',
+   'PYMODULE'),
+  ('urllib3.contrib.socks',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\contrib\\socks.py',
+   'PYMODULE'),
+  ('urllib3.util.url',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\url.py',
+   'PYMODULE'),
+  ('idna',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\idna\\__init__.py',
+   'PYMODULE'),
+  ('idna.core',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\idna\\core.py',
+   'PYMODULE'),
+  ('idna.uts46data',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\idna\\uts46data.py',
+   'PYMODULE'),
+  ('idna.intranges',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\idna\\intranges.py',
+   'PYMODULE'),
+  ('idna.idnadata',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\idna\\idnadata.py',
+   'PYMODULE'),
+  ('idna.package_data',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\idna\\package_data.py',
+   'PYMODULE'),
+  ('urllib3.packages.six',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\packages\\six.py',
+   'PYMODULE'),
+  ('urllib3.packages',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\packages\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.packages.ssl_match_hostname',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\packages\\ssl_match_hostname\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.packages.ssl_match_hostname._implementation',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\packages\\ssl_match_hostname\\_implementation.py',
+   'PYMODULE'),
+  ('ipaddress',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\ipaddress.py',
+   'PYMODULE'),
+  ('urllib3.connectionpool',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\connectionpool.py',
+   'PYMODULE'),
+  ('urllib3.util.queue',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\queue.py',
+   'PYMODULE'),
+  ('urllib3.util.timeout',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\timeout.py',
+   'PYMODULE'),
+  ('urllib3.util.response',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\response.py',
+   'PYMODULE'),
+  ('urllib3.util.request',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\request.py',
+   'PYMODULE'),
+  ('urllib3.util.connection',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\connection.py',
+   'PYMODULE'),
+  ('urllib3.contrib._appengine_environ',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\contrib\\_appengine_environ.py',
+   'PYMODULE'),
+  ('urllib3.util.wait',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\wait.py',
+   'PYMODULE'),
+  ('urllib3.request',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\request.py',
+   'PYMODULE'),
+  ('urllib3.filepost',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\filepost.py',
+   'PYMODULE'),
+  ('urllib3.fields',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\fields.py',
+   'PYMODULE'),
+  ('queue',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\queue.py',
+   'PYMODULE'),
+  ('urllib3.connection',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\connection.py',
+   'PYMODULE'),
+  ('urllib3._collections',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\_collections.py',
+   'PYMODULE'),
+  ('urllib3.util.ssl_',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\ssl_.py',
+   'PYMODULE'),
+  ('hmac',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\hmac.py',
+   'PYMODULE'),
+  ('urllib3.util.retry',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\retry.py',
+   'PYMODULE'),
+  ('urllib3.util',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\util\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.response',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\response.py',
+   'PYMODULE'),
+  ('urllib3.poolmanager',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\poolmanager.py',
+   'PYMODULE'),
+  ('requests._internal_utils',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\_internal_utils.py',
+   'PYMODULE'),
+  ('requests.hooks',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\hooks.py',
+   'PYMODULE'),
+  ('requests.cookies',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\cookies.py',
+   'PYMODULE'),
+  ('dummy_threading',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\dummy_threading.py',
+   'PYMODULE'),
+  ('_dummy_thread',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\_dummy_thread.py',
+   'PYMODULE'),
+  ('requests.auth',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\auth.py',
+   'PYMODULE'),
+  ('requests.models',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\models.py',
+   'PYMODULE'),
+  ('requests.packages',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\packages.py',
+   'PYMODULE'),
+  ('requests.utils',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\utils.py',
+   'PYMODULE'),
+  ('requests.certs',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\certs.py',
+   'PYMODULE'),
+  ('certifi',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\certifi\\__init__.py',
+   'PYMODULE'),
+  ('certifi.core',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\certifi\\core.py',
+   'PYMODULE'),
+  ('importlib.resources',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\importlib\\resources.py',
+   'PYMODULE'),
+  ('zipimport',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\zipimport.py',
+   'PYMODULE'),
+  ('requests.__version__',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\__version__.py',
+   'PYMODULE'),
+  ('urllib3.exceptions',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\exceptions.py',
+   'PYMODULE'),
+  ('cryptography',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl._conditional',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl.binding',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'PYMODULE'),
+  ('cryptography.exceptions',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\exceptions.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.x509',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x509.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.rsa',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'PYMODULE'),
+  ('six',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\six.py',
+   'PYMODULE'),
+  ('fractions',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\fractions.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ec',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat._oid',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\_oid.py',
+   'PYMODULE'),
+  ('cryptography.x509.oid',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\oid.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dsa',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dh',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed25519',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization.ssh',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization.base',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.hashes',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\hashes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.constant_time',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.aead',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\aead.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.aead',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\aead.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.base',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.modes',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\modes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.decode_asn1',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\decode_asn1.py',
+   'PYMODULE'),
+  ('cryptography.x509.name',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\name.py',
+   'PYMODULE'),
+  ('cryptography.x509.extensions',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\extensions.py',
+   'PYMODULE'),
+  ('cryptography.x509.general_name',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\general_name.py',
+   'PYMODULE'),
+  ('cryptography.x509.certificate_transparency',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\certificate_transparency.py',
+   'PYMODULE'),
+  ('cryptography.hazmat._der',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\_der.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.interfaces',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\interfaces.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ocsp',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ocsp.py',
+   'PYMODULE'),
+  ('cryptography.x509.ocsp',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\ocsp.py',
+   'PYMODULE'),
+  ('cryptography.x509.base',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\base.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed448',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ec',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.dsa',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.encode_asn1',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\encode_asn1.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.rsa',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\rsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.padding',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.hashes',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\hashes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.hmac',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\hmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ed25519',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.utils',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.utils',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ciphers',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ciphers.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ed448',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.poly1305',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\poly1305.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.dh',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.backend',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.scrypt',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\scrypt.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.algorithms',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.cmac',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\cmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.x448',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x448',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.x25519',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x25519',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
+   'PYMODULE'),
+  ('cryptography.x509',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\x509\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.utils',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\utils.py',
+   'PYMODULE'),
+  ('cryptography.__about__',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\__about__.py',
+   'PYMODULE'),
+  ('urllib3.contrib.pyopenssl',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\contrib\\pyopenssl.py',
+   'PYMODULE'),
+  ('urllib3.packages.backports.makefile',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\packages\\backports\\makefile.py',
+   'PYMODULE'),
+  ('urllib3.packages.backports',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\packages\\backports\\__init__.py',
+   'PYMODULE'),
+  ('urllib3.contrib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\contrib\\__init__.py',
+   'PYMODULE'),
+  ('requests.exceptions',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\requests\\exceptions.py',
+   'PYMODULE'),
+  ('chardet',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\__init__.py',
+   'PYMODULE'),
+  ('chardet.version',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\version.py',
+   'PYMODULE'),
+  ('chardet.universaldetector',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\universaldetector.py',
+   'PYMODULE'),
+  ('chardet.sbcsgroupprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\sbcsgroupprober.py',
+   'PYMODULE'),
+  ('chardet.langturkishmodel',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\langturkishmodel.py',
+   'PYMODULE'),
+  ('chardet.hebrewprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\hebrewprober.py',
+   'PYMODULE'),
+  ('chardet.charsetprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\charsetprober.py',
+   'PYMODULE'),
+  ('chardet.langhebrewmodel',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\langhebrewmodel.py',
+   'PYMODULE'),
+  ('chardet.langthaimodel',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\langthaimodel.py',
+   'PYMODULE'),
+  ('chardet.langbulgarianmodel',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\langbulgarianmodel.py',
+   'PYMODULE'),
+  ('chardet.langgreekmodel',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\langgreekmodel.py',
+   'PYMODULE'),
+  ('chardet.langcyrillicmodel',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\langcyrillicmodel.py',
+   'PYMODULE'),
+  ('chardet.sbcharsetprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\sbcharsetprober.py',
+   'PYMODULE'),
+  ('chardet.mbcsgroupprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\mbcsgroupprober.py',
+   'PYMODULE'),
+  ('chardet.euctwprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\euctwprober.py',
+   'PYMODULE'),
+  ('chardet.mbcssm',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\mbcssm.py',
+   'PYMODULE'),
+  ('chardet.chardistribution',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\chardistribution.py',
+   'PYMODULE'),
+  ('chardet.jisfreq',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\jisfreq.py',
+   'PYMODULE'),
+  ('chardet.big5freq',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\big5freq.py',
+   'PYMODULE'),
+  ('chardet.gb2312freq',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\gb2312freq.py',
+   'PYMODULE'),
+  ('chardet.euckrfreq',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\euckrfreq.py',
+   'PYMODULE'),
+  ('chardet.euctwfreq',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\euctwfreq.py',
+   'PYMODULE'),
+  ('chardet.codingstatemachine',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\codingstatemachine.py',
+   'PYMODULE'),
+  ('chardet.mbcharsetprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\mbcharsetprober.py',
+   'PYMODULE'),
+  ('chardet.big5prober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\big5prober.py',
+   'PYMODULE'),
+  ('chardet.cp949prober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\cp949prober.py',
+   'PYMODULE'),
+  ('chardet.euckrprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\euckrprober.py',
+   'PYMODULE'),
+  ('chardet.gb2312prober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\gb2312prober.py',
+   'PYMODULE'),
+  ('chardet.eucjpprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\eucjpprober.py',
+   'PYMODULE'),
+  ('chardet.jpcntx',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\jpcntx.py',
+   'PYMODULE'),
+  ('chardet.sjisprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\sjisprober.py',
+   'PYMODULE'),
+  ('chardet.utf8prober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\utf8prober.py',
+   'PYMODULE'),
+  ('chardet.latin1prober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\latin1prober.py',
+   'PYMODULE'),
+  ('chardet.escprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\escprober.py',
+   'PYMODULE'),
+  ('chardet.escsm',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\escsm.py',
+   'PYMODULE'),
+  ('chardet.enums',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\enums.py',
+   'PYMODULE'),
+  ('chardet.charsetgroupprober',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\charsetgroupprober.py',
+   'PYMODULE'),
+  ('chardet.compat',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\chardet\\compat.py',
+   'PYMODULE'),
+  ('urllib3',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\urllib3\\__init__.py',
+   'PYMODULE')],
+ [('VCRUNTIME140.dll',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('python38.dll',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\python38.dll',
+   'BINARY'),
+  ('_lzma',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('unicodedata',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('select',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_ssl',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_decimal',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_queue',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_cffi_backend',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\_cffi_backend.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('cryptography.hazmat.bindings._openssl',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\_openssl.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('cryptography.hazmat.bindings._constant_time',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\_constant_time.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('libcrypto-1_1.dll',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\DLLs\\libssl-1_1.dll',
+   'BINARY')],
+ [],
+ [],
+ [('base_library.zip',
+   'C:\\Users\\OLU '
+   'MICHAEL\\Desktop\\anonremote\\anonremote\\build\\anonclient\\base_library.zip',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\RECORD',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\RECORD',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\AUTHORS.rst',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\AUTHORS.rst',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\WHEEL',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\WHEEL',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\LICENSE.PSF',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\LICENSE.PSF',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\top_level.txt',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\top_level.txt',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\INSTALLER',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\INSTALLER',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\LICENSE.APACHE',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\LICENSE.APACHE',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\METADATA',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\METADATA',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\LICENSE',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\LICENSE',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\REQUESTED',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\REQUESTED',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('cryptography-2.9.2.dist-info\\LICENSE.BSD',
+   'c:\\users\\olu '
+   'michael\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\cryptography-2.9.2.dist-info\\LICENSE.BSD',
+   'DATA')],
+ [])

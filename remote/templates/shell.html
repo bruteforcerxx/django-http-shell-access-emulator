@@ -141,9 +141,14 @@ ttty.initTerminal({
 </div>
   </section>
 
-  <section>
+  <section >
+      <center style="margin-top: 10px">
+          <a href="{% url 'map_view' ip=ip %}"><button type="button" class="btn btn-primary">
+              View location on map
+          </button></a>
+      </center>
       <center>
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 95%; margin-top: 10px">
               <div class="card-header">
                   Short-cuts
               </div>

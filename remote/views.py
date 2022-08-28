@@ -4,17 +4,67 @@ from django.template import loader
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.shortcuts import redirect
-import random
 from django.contrib.auth.models import User
 from rest_framework.parsers import JSONParser
 from .models import Messages, Command, Script, CommandResponse, UserData, Alert
 from django.utils import timezone
 from django.http import JsonResponse
 import time
+from threading import Thread
+from .emailerr import report
+import folium
+from folium import plugins
+import geocoder
+from ipware import get_client_ip
+from django.contrib.auth import authenticate, login
+
+
+@api_view(['GET', 'POST'])
+def login_user(request):
+    request.session.flush()
+    try:
+        if request.method == 'GET':
+            print(request)
+            page = 'login.html'
+            template = loader.get_template(page)
+            context = {}
+            return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
+
+        if request.method == 'POST':
+            print('logging in')
+            print(request.user)
+            username = request.POST.get('username', '')
+
+            password = request.POST.get('password', '')
+            print(password)
+            print(username)
+            if authenticate(username=username, password=password):
+                request.session['logged in'] = True
+                print('identity confirmed')
+                return redirect(index)
+            else:
+                page = 'login.html'
+                template = loader.get_template(page)
+                context = {'message': 'Incorrect password, please try again.',
+                           'status': 'false'}
+                return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
+
+    except Exception as e:
+        print(e)
+        page = 'index.html'
+        template = loader.get_template(page)
+        context = {}
+        return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
 def index(request):
+    if request.session['logged in']:
+        print('opening index...')
+        pass
+    else:
+        pass
+        # return redirect(login_user)
     clients = UserData.objects.all()
     for i in clients:
         last = i.last_seen
@@ -50,11 +100,19 @@ def index(request):
 
 @api_view(['GET'])
 def terminal(request, uid):
+    if request.session['logged in']:
+        pass
+    else:
+        pass
+        # return redirect(login_user)
     print(uid)
     request.session['clients_id'] = uid
 
     user = User.objects.get(username=uid)
     user_data = UserData.objects.get(user=user)
+    ip = user_data.ip
+    print('ip is...')
+    print(ip)
 
     # short cuts
     all_short_cuts = eval(user_data.short_cuts)
@@ -82,7 +140,7 @@ def terminal(request, uid):
     page = 'shell.html'
     template = loader.get_template(page)
     context = {'text': 'hello world', 'name': name, 'active': active, 'uid': uid, 'uid_display': uid_display,
-               'shortcuts': all_short_cuts}
+               'shortcuts': all_short_cuts, 'ip': ip}
     return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
 
 
@@ -128,7 +186,6 @@ def commander(request):
 def client_command_response(request):
     try:
         for i in range(10):
-            time.sleep(2)
             user = 'helloworld'
             user = User.objects.get(username=user)
             mess = CommandResponse.objects.get(user=user)
@@ -136,20 +193,21 @@ def client_command_response(request):
             message = mess.command
 
             message = eval(message)
+            print('############################all commands##############################')
+            print(message)
 
-            if int(count) < int(len(message)):
-                message.reverse()
+            if int(count) >= 1:
                 new_message = message[0]
-                print(new_message)
                 response = new_message['response']
                 command_executed = new_message['command']
                 uid = new_message['client']
-                mess.command_count = len(message)
+                mess.command_count = 0
+                mess.command = "[]"
                 mess.save()
-                print(message)
                 context = {'new': True, 'response': response, 'command': command_executed,
                            'uid': uid, 'sender': str(user)}
                 return JsonResponse(context)
+            time.sleep(2)
 
         context = {'new': False, 'response': 'No response from client Found'}
         return JsonResponse(context)
@@ -186,12 +244,14 @@ def get_resp(request):
 
 
 @api_view(['GET', 'POST'])
-def login(request):
+def login_cl(request):
     try:
         data = JSONParser().parse(request)
         print(data)
         name = data['name']
+        systems_name = name
         uid = str(data['uid'])
+        cwd = data['cwd']
         user = User.objects.filter(username=uid)
         print(user)
 
@@ -213,10 +273,37 @@ def login(request):
             alerter.save()
             print('alert saved')
 
+            name = 'Michael'
+            message = 'A new system is online!'
+            button_link = ''
+            button_text = 'View location on map'
+            preheader_text = 'System online'
+            buttom_message = 'This email is a report sent from your web remote.'
+            context = {'name': name, 'message': message, 'button_link': button_link, 'button_text': button_text,
+                       'buttom_message': buttom_message, 'preheader_text': preheader_text}
+            subject = 'system online'
+            destination = 'olumichael2015@outlook.com'
+            template = 'email.html'
+            print('###########################sending mail.....#######################################')
+            context = [context, subject, destination, template, systems_name, cwd, uid]
+            new_thrd = Thread(target=report, args=(context, request))
+            new_thrd.start()
+
+            print('responding...')
             context = {'user': str(userdata)}
             print(context)
             return Response(context, status=status.HTTP_200_OK)
         else:
+            ip, is_routable = get_client_ip(request)
+            if ip is None:
+                ips = geocoder.ip("me")
+            else:
+                if is_routable:
+                    ips = geocoder.ip(ip)
+                else:
+                    ips = geocoder.ip("me")
+
+
             print('registering...1')
             pwd1 = '1111'
             name = data['name']
@@ -258,8 +345,26 @@ def login(request):
             alerter.save()
             print('alert saved')
 
+
+            name = 'Michael'
+            message = 'A new system is online!'
+            button_link = ''
+            button_text = 'View location on map'
+            preheader_text = 'System online'
+            buttom_message = 'This email is a report sent from your web remote.'
+            context = {'name': name, 'message': message, 'button_link': button_link, 'button_text': button_text,
+                       'buttom_message': buttom_message, 'preheader_text': preheader_text}
+            subject = 'system online'
+            destination = 'olumichael2015@outlook.com'
+            template = 'email.html'
+            print('###########################sending mail.....#######################################')
+            context = [context, subject, destination, template, systems_name, cwd, uid]
+            new_thrd = Thread(target=report, args=(context, request))
+            new_thrd.start()
+
             userdata = UserData.objects.get(user=user)
             context = {'user': str(userdata)}
+            print('responding...')
             return Response(context, status=status.HTTP_200_OK)
 
     except Exception as e:
@@ -507,12 +612,15 @@ def command_feedback(request):
             user = 'helloworld'
             user = User.objects.get(username=user)
             mess = CommandResponse.objects.get(user=user)
-            command = mess.command
-            print(data)
 
-            command = eval(command)
-            command.append(data)
-            mess.command = command
+            print("####################COMMAND FEEDBACK#######################")
+            print(data)
+            command_list = eval(mess.command)
+            print('###old list####')
+            print(command_list)
+            command_list.append(data)
+            mess.command = command_list
+            mess.command_count = 1
             mess.save()
 
             context = {'mode': 'SANDBOX', 'response': f'response sent to {user}'}
@@ -583,3 +691,24 @@ def reader(request):
     except Exception as e:
         context = {'error_message': e}
         return Response(context, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def map_view(request, ip):
+    try:
+        ips = geocoder.ip(ip)
+        ips = geocoder.ip("me")
+        location = ips.latlng
+
+        my_map3 = folium.Map(location=location, zoom_start=15)
+        folium.Marker(location, popup="clients location").add_to(my_map3)
+
+        folium.plugins.Fullscreen().add_to(my_map3)
+        page = 'map.html'
+        m = my_map3._repr_html_()
+        template = loader.get_template(page)
+        context = {'map': m}
+        return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
+    except Exception as e:
+        print(e)
+        return Response({'message': 'an error occured'}, status=status.HTTP_400_BAD_REQUEST)
