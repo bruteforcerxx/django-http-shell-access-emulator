@@ -3,7 +3,13 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.sender, name='post'),
+    path('', views.index, name='index'),
+    path('terminal/<uid>', views.terminal, name='terminal'),
+    path('commander', views.commander, name='commander'),
+    path('notifier', views.notifier, name='notifier'),
+    path('shortcuts', views.short_cuts, name='shortcuts'),
+    path('client_command_response', views.client_command_response, name='client_command_response'),
+    path('get_resp', views.get_resp, name='get_resp'),
     path('get', views.reader, name='get'),
     path('candy', views.script, name='candy'),
     path('login', views.login, name='login'),

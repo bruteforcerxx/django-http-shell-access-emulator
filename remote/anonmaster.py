@@ -5,8 +5,9 @@ import json
 import os
 from datetime import datetime
 
-endpoint_1 = 'http://127.0.0.1:8000/'
+endpoint_3 = 'http://127.0.0.1:8000/'
 endpoint_2 = 'https://example.com/'
+endpoint_1 = 'http://172.20.10.6:8000/'
 
 
 

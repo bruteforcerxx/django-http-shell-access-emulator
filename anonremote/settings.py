@@ -78,14 +78,21 @@ WSGI_APPLICATION = 'anonremote.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '******************',
-        'HOST': '****************************',
+        'NAME': 'det1pmenrh93u2',
+        'HOST': 'ec2-107-23-76-12.compute-1.amazonaws.com',
         'PORT': 5432,
-        'USER': '**********',
-        'PASSWORD': '**************************************',
+        'USER': 'qtszlqhvstatuy',
+        'PASSWORD': '8f7632f732a36ca21e37c56b1988e89d2019dc2c274a426169dd4e7ef3be59a0',
 
     }
 }
+
+"""DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="" />
+    <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+    <script src="{% static 'tty/ttty.iife.js' %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>terminal</title>
+</head>
+<body>
+
+<div id="terminal" style="min-height: 500px">
+    <script>
+var uid = "{{uid}}"
+var user = "\n user-uid@" + uid + ":~$ "
+ttty.initTerminal({
+  host: document.querySelector("#terminal"),
+  prompt: user,
+  welcomeMessage: "Initiated command line prompt for user ." + uid + " | remote-cmd [Version 0.0.0.1]",
+  commands: {
+    exec: {
+      name: "exec",
+      description: "a command for sending shell commands",
+      argDescriptions: ["a command to be sent to a client"],
+      func: ({ print }, argument) => {
+          print("-"); print(argument + ' command detected'); print('sending ' + argument + ' command to ' + uid + '...');
+            $.ajax({
+               'method': 'POST',
+               'url': '/commander',  data: {argss: argument, csrfmiddlewaretoken: "{{ csrf_token }}" },
+               success: function(data) {
+                   print("-");
+                   print(data.response);
+               },
+               failure: function(data) {
+                   alert('an error occured'); }
+           });
+
+           $.ajax({
+               'url': '/client_command_response',
+               success: function(data) {
+                   print("-");
+                   print(data.response);
+               },
+               failure: function(data) {
+                   alert('an error occured'); }
+           });
+
+       }
+    },
+
+    echo: {
+      name: "echo",
+      description: "a test command with one echo arg",
+      argDescriptions: ["a string to be echoed in console"],
+      func: ({ print }, argument) => { print(argument) }
+    },
+    test: {
+      name: "test",
+      description: "a test command with no args",
+      func: ({ print }) => { print("foo") }
+    },
+    multiply: {
+      name: "multiply",
+      description: "Multiply two numbers",
+      argDescriptions: ["number one", "number two"],
+      func: ({ print }, one, two) => { print(Number(one) * Number(two)) }
+    }
+  }
+})
+    </script>
+
+</div>
+<div>
+    <button>Exit Terminal</button>
+</div>
+</body>
+</html>

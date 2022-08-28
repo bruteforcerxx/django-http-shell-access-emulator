@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Remote-cmd V-0.0.0.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+      <script src="{% static 'tty/ttty.iife.js' %}"></script>
+  </head>
+  <body>
+
+  <script>
+      $(document).ready(function(){
+      setInterval(function(){
+      $.ajax({
+          'url': '/notifier',
+          success: function(data) {
+              if (data.new == 1){
+                  var message = "Client online!- | Name: " + data.name + " | UID: " + data.uid;
+                  alert(message);
+              };
+          },
+          failure: function(data) {
+             alert('an error occured'); }
+      });
+      },3000);
+
+      })
+  </script>
+
+  <section>
+      <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+              <h5 class="text-white h4">Collapsed content</h5>
+              <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark ">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'index' %}">Remote-cmd</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+      </nav>
+  </section>
+
+      <section>
+      <table class="table">
+          <thead class="table-dark">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">UID</th>
+              <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+
+              {% if active == True %}
+              <th scope="row"><img src="https://img.icons8.com/emoji/24/000000/green-circle-emoji.png"/></th>
+              {% else %}
+              <th scope="row"><img src="https://img.icons8.com/emoji/24/000000/red-circle-emoji.png"/></th>
+              {% endif %}
+              <td>{{name}}</td>
+              <td>{{uid_display}}</td>
+              <td><button id="quick-action" value="shutdown/s" type="button" class="btn btn-danger">Shutdown</button></td>
+          </tr>
+
+          </tbody>
+      </table>
+
+  </section>
+
+
+  <section>
+<div id="terminal" style="min-height: 300px">
+    <script>
+var uid = "{{uid}}"
+var user = "\n uid@" + uid + ":~$ "
+ttty.initTerminal({
+  host: document.querySelector("#terminal"),
+  prompt: user,
+  welcomeMessage: "Initiated command line prompt for user ." + uid + " | remote-cmd [Version 0.0.0.1]",
+  commands: {
+    exec: {
+      name: "exec",
+      description: "a command for sending shell commands",
+      argDescriptions: ["a command to be sent to a client"],
+      func: ({ print }, argument) => {
+          print("-"); print(argument + ' command detected'); print('sending ' + argument + ' command to ' + uid + '...');
+            $.ajax({
+               'method': 'POST',
+               'url': '/commander',  data: {argss: argument, csrfmiddlewaretoken: "{{ csrf_token }}" },
+               success: function(data) {
+                   print("-");
+                   print(data.response);
+               },
+               failure: function(data) {
+                   alert('an error occured'); }
+           });
+
+           $.ajax({
+               'url': '/client_command_response',
+               success: function(data) {
+                   print("-");
+                   print(data.response);
+               },
+               failure: function(data) {
+                   alert('an error occured'); }
+           });
+
+       }
+    },
+
+    echo: {
+      name: "echo",
+      description: "a test command with one echo arg",
+      argDescriptions: ["a string to be echoed in console"],
+      func: ({ print }, argument) => { print(argument) }
+    },
+    test: {
+      name: "test",
+      description: "a test command with no args",
+      func: ({ print }) => { print("foo") }
+    },
+    multiply: {
+      name: "multiply",
+      description: "Multiply two numbers",
+      argDescriptions: ["number one", "number two"],
+      func: ({ print }, one, two) => { print(Number(one) * Number(two)) }
+    }
+  }
+})
+    </script>
+
+</div>
+  </section>
+
+  <section>
+      <center>
+          <div class="card" style="width: 18rem;">
+              <div class="card-header">
+                  Short-cuts
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create new command button
+                  </button></li>
+                  <li class="list-group-item"><h5>Active short-cut actions</h5></li>
+                  {% for i in shortcuts %}
+                  <li class="list-group-item"><button id="quick-action" value="{{i.button_value}}" type="button" class="btn btn-success">{{i.button_name}} command</button></li>
+                  {% endfor %}
+              </ul>
+          </div>
+      </center>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Action short-cut creation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <form method="post" action="{% url 'shortcuts' %}">
+      <div class="modal-body">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Enter command</span>
+            <input type="text" name="action" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <script>
+      $(document).on('click', '#quick-action', function(){
+            var argument = $(this).val()
+            $.ajax({
+               'method': 'POST',
+               'url': '/commander',  data: {argss: argument, csrfmiddlewaretoken: "{{ csrf_token }}" },
+               success: function(data) {
+                   var message = argument + " command sent!"
+                   alert(message)
+               },
+               failure: function(data) {
+                   alert('an error occured'); }
+           });
+
+            $.ajax({
+               'url': '/client_command_response',
+               success: function(data) {
+                   var resp = "Response from " + data.uid + " for " + data.command + " command " + " result: " + data.response;
+                   alert(resp);
+               },
+               failure: function(data) {
+                   alert('an error occured'); }
+           });
+
+      })
+  </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

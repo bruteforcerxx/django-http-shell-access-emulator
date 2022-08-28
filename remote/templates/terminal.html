@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'Jaxit-main/jaxit.css' %}" />
+    <script src="{% static 'Jaxit-main/jaxit.min.js' %}"></script>
+    <title>Terminal</title>
+</head>
+
+      $.ajax({
+        method: 'POST', 'url': '/test', data: JSON.stringify({'argss': argument}),
+      success: function(data) {
+          alert('command sent!');
+          },
+      failure: function(data) {
+           alert('an error occured'); }
+       });
+
+       $.ajax({
+         method: 'GET', 'url': '/get_resp',
+               success: function(data) {
+          alert('command sent!');
+          },
+      failure: function(data) {
+           alert('an error occured'); }
+       })
+
+       });
+
+<body>
+<div style="min-height: 200px"></div>
+    <div style="min-height: ">
+    <script>
+
+
+var header = 'ANON MASTER [Version 0.0.0.1] (c) 2015 Anon master. All rights reserved Author: Michael Olu'
+var text = '{{text}}'
+var jax = createJaxit();
+jax.init();
+jax.defaultStyle();
+jax.print(header, 'green');
+jax.changeLocation('bottom');
+jax.scan('Your Question', "red", "white", false, function(userInput) {
+    if (userInput == 'cls'){
+        jax.clear();}
+    else{
+        jax.print(userInput);}
+
+});
+
+</script>
+        <br>
+    </div>
+<section>
+
+</section>
+
+<section>
+
+</section>
+
+</body>
+
+</html>
