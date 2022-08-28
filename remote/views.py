@@ -138,7 +138,8 @@ def client_command_response(request):
             message = eval(message)
 
             if int(count) < int(len(message)):
-                new_message = message[int(len(message) - 1)]
+                message.reverse()
+                new_message = message[0]
                 print(new_message)
                 response = new_message['response']
                 command_executed = new_message['command']
